@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/second', function(){
+    $num = 11;
+    $str = "Hello";
+    $mas = [5, 2 ,-9, 12];
+    return view('second', compact('num', 'str', 'mas'));
+});
