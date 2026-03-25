@@ -31,3 +31,6 @@ Route::get('/home', function(){
 
 Route::get('/', [MainController::class, 'showIndex'])-> name('home');
 Route::get('/', [MainController::class, 'showArray'])-> name('array');
+Route::get('/shuffle', [MainController::class, 'shuffleArray']);
+Route::get('/sort', [MainController::class, 'sortArray']);
+Route::get('/filter', [MainController::class, 'filterArray']);

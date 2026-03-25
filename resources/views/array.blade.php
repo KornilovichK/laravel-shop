@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/css/app.css">
+@vite(['resources/css/app.css'])
 <div class = "everything">
     @foreach($array as $item)
         <div class = "shop-card">
@@ -8,3 +8,9 @@
         </div>
     @endforeach
 </div>
+
+<div class="links">
+        <p><a href="/shuffle" class="btn-shuffle">Перемешать массив</a></p>
+        <p><a href="/sort" class="btn-sort">Сортировать (по цене)</a></p>
+        <p><a href="/filter" class="btn-filter">Фильтр (> 1000)</a></p>
+    </div>
