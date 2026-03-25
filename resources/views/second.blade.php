@@ -8,10 +8,14 @@
     @Vite(['resources/css/app.css', 'resources/js/app.js']) 
 </head>
 <body>
-    <h1>Вторая страничка</h1>
+    <h2>asdasd</h2>
 
-    <p>{{ $num+10 }}</p>
-    <p>{{ $str. ', World' }}</p>
-    <p>{{ $mas }}</p>
+    <p>{{ $num+100 }}</p>
+    <p>{{ $str.', world!' }}</p>
+    <div>
+    @for ($i = 0; $i < count($mas); $i++)
+        <p>{{ $mas[$i] }}</p>
+    @endfor
+    </div>
 </body>
 </html>

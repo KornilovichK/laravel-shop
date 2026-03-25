@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,3 +24,10 @@ Route::get('/second', function(){
     $mas = [5, 2 ,-9, 12];
     return view('second', compact('num', 'str', 'mas'));
 });
+
+Route::get('/home', function(){
+    return view('home');
+});
+
+Route::get('/', [MainController::class, 'showIndex'])-> name('home');
+Route::get('/', [MainController::class, 'showArray'])-> name('array');
